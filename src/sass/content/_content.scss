@@ -1,5 +1,7 @@
 .section {
 
+    @media screen and (max-width:1023px) {}
+
     &__1 {
         img {
             --ratio-ultrawide: 18/5;
@@ -13,6 +15,25 @@
     &__2 {
 
         // padding-block: var(--size-7);
+
+        @media screen and (max-width:1023px) {
+            .title {
+                display: block !important;
+            }
+
+            .items {
+                grid-template-columns: 1fr !important;
+            }
+
+            .mobile-size {
+                margin: 0 auto;
+            }
+
+            .margin-auto {
+                margin: 0 auto;
+            }
+
+        }
 
         .title {
             text-align: center;
@@ -43,6 +64,22 @@
     }
 
     &__3 {
+
+        @media screen and (max-width:1023px) {
+            .title {
+                display: block !important;
+            }
+
+            .items {
+                grid-template-columns: 1fr !important;
+
+            }
+
+            .margin-auto {
+                margin: 0 auto;
+            }
+        }
+
         img {
             --ratio-ultrawide: 18/5;
             height: 100%;
@@ -78,6 +115,17 @@
     }
 
     &__4 {
+
+        @media screen and (max-width:1023px) {
+            .items {
+                grid-template-columns: 1fr !important;
+            }
+
+            .image {
+                padding-bottom: 2rem;
+            }
+        }
+
         img {
             --ratio-ultrawide: 18/5;
             height: 100%;
@@ -110,6 +158,23 @@
         background-color: var(--brand);
         padding-block: var(--size-9);
 
+        @media screen and (max-width:1023px) {
+            .items {
+                display: grid !important;
+            }
+
+            .text {
+                order: 2;
+                padding-bottom: 0 !important;
+            }
+
+            .image {
+                order: 1;
+            }
+
+
+        }
+
         .items {
             display: flex;
             gap: 2rem;
@@ -131,6 +196,22 @@
 
     &__6 {
         padding-block: var(--size-9);
+
+        @media screen and (max-width:1023px) {
+            .items {
+                grid-template-columns: 1fr !important;
+            }
+
+            .item {
+                display: flex;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .first-column {
+                padding-right: 0 !important;
+            }
+        }
 
         h3 {
             font-weight: var(--font-weight-8);

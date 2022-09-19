@@ -2,6 +2,34 @@
     background-color: black;
     padding-block: 2rem;
 
+    @media screen and (max-width:1023px) {
+        .flex {
+            display: block !important;
+        }
+
+        .footer-icon {
+            margin: 0 auto;
+        }
+
+        .footer-icons {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 1.5rem;
+        }
+
+        .icons-margin {
+            margin: 0 auto;
+        }
+
+        .footer-columns {
+            display: block !important;
+        }
+
+        .contact-flex {
+            display: flex;
+        }
+    }
+
     .footer-icons {
         margin-left: auto;
     }
