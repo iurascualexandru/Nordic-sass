@@ -3,13 +3,40 @@
     @media screen and (max-width:1023px) {}
 
     &__1 {
+        display: grid;
+
         img {
             --ratio-ultrawide: 18/5;
             height: 100%;
             object-fit: cover;
+            grid-area: 1 / 1 / 2/ 3;
         }
 
+        @media screen and (min-width:1024px) {
+            div {
+                grid-area: 1/2/3/3;
+                margin-right: 20%;
+            }
+        }
 
+        @media screen and (max-width:1023px) {
+            div {
+                text-align: center !important;
+            }
+        }
+
+        div {
+            padding-top: 3em;
+        }
+
+        h1 {
+            font-weight: var(--font-weight-8);
+        }
+
+        button {
+            background-color: var(--brand-hover);
+            color: var(--gray-0);
+        }
     }
 
     &__2 {
