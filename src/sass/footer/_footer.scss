@@ -2,13 +2,24 @@
     background-color: black;
     padding-block: 2rem;
 
+    @media screen and (min-width:1024px) {
+        .icons-margin {
+            margin-inline: 1em;
+        }
+    }
+
     @media screen and (max-width:1023px) {
+
+        h5 {
+            padding-top: 1em;
+        }
+
         .flex {
             display: block !important;
         }
 
         .footer-icon {
-            margin: 0 auto;
+            margin: 0 auto !important;
         }
 
         .footer-icons {
@@ -25,9 +36,11 @@
             display: block !important;
         }
 
-        .contact-flex {
-            display: flex;
-        }
+
+    }
+
+    .contact-flex {
+        display: flex;
     }
 
     .footer-icons {
