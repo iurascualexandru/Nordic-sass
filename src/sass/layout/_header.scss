@@ -88,11 +88,7 @@ body {
     }
 
     @media screen and (min-width:1024px) {
-      .modal-menu {
-        display: none;
-      }
-
-      .modal {
+      .btn {
         display: none;
       }
     }
@@ -104,22 +100,6 @@ body {
     @media screen and (max-width:1023px) {
       .logo {
         grid-area: 1/1/2/2;
-      }
-
-      .modal {
-        width: 100%;
-        height: 100%;
-        background-color: var(--gray-0);
-        text-align: center;
-        display: none;
-      }
-
-      .modal-elements {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        color: var(--gray-0);
-        font-size: var(--size-4);
       }
 
       .content {
@@ -178,4 +158,45 @@ body {
   &__lower {
     display: none;
   }
+}
+
+// Modal
+.modal-window {
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: var(--gray-0);
+  // overflow: hidden !important;
+}
+
+.close-modal {
+  text-align: right;
+  margin-right: 2em;
+  margin-top: 1em;
+  padding-bottom: 5em;
+  color: black;
+}
+
+.close-svg {
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+.modal-elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-el {
+  color: var(--gray-9) !important;
+  padding-block: 0.5em;
+  text-decoration: none;
+  font-size: var(--font-size-4);
 }
