@@ -160,6 +160,11 @@ body {
   }
 }
 
+.menu-items {
+  text-decoration: none;
+  font-weight: var(--font-weight-6);
+}
+
 // Modal
 .modal-window {
   text-align: center;

@@ -110,7 +110,7 @@
 
         @media screen and (max-width:1023px) {
             .title {
-                display: block !important;
+                display: block;
             }
 
             .items {
@@ -120,6 +120,12 @@
 
             .margin-auto {
                 margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            .title {
+                width: 30%;
             }
         }
 
@@ -134,8 +140,6 @@
 
         .title {
             text-align: center;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
             margin-block: var(--size-7);
         }
 
