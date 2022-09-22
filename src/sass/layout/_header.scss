@@ -102,6 +102,18 @@ body {
         grid-area: 1/1/2/2;
       }
 
+      .sandvish-svg {
+        width: 1.9em;
+        height: 1.9em;
+      }
+
+      .btn {
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+
       .content {
         grid-template-columns: 1fr 1fr !important;
       }
@@ -178,25 +190,31 @@ body {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: var(--gray-0);
-  // overflow: hidden !important;
 }
 
 .close-modal {
-  text-align: right;
   margin-right: 2em;
   margin-top: 1em;
-  padding-bottom: 5em;
   color: black;
+  float: right;
 }
 
 .close-svg {
   margin: 0 auto;
   margin-right: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 .modal-elements {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 7em;
 }
 
 .modal-el {
@@ -204,4 +222,183 @@ body {
   padding-block: 0.5em;
   text-decoration: none;
   font-size: var(--font-size-4);
+}
+
+@media screen and (min-width:1024px) {
+  #cart-modal {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  #cart-modal {
+    width: 70%;
+  }
+}
+
+#cart-modal {
+  display: none;
+  position: absolute;
+  background: var(--gray-0);
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.cart-svg {
+  width: 26px;
+  height: 23px;
+}
+
+.cart-p {
+  margin-top: 7em;
+  text-align: center;
+  font-weight: var(--font-weight-8);
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-nav {
+  box-shadow: none;
+}
+
+.slider-padding-top {
+  padding-top: 2em;
+}
+
+.slider2-padding-top {
+  padding-top: 4em;
+}
+
+// LOGIN Modal
+
+.account-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.account-svg {
+  width: 26px;
+  height: 23px;
+}
+
+@media screen and (min-width:1024px) {
+  .login {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  .login {
+    width: 90%;
+  }
+
+  .account-modal-footer {
+    display: block !important;
+    text-align: center;
+  }
+
+  .login-submit {
+    float: none !important;
+  }
+}
+
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3em 2em;
+  background: var(--gray-0);
+  display: none;
+
+}
+
+.login-modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-title {
+  font-weight: var(--font-weight-6);
+  margin-right: 0 !important;
+}
+
+.login-svg {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.close-login {
+  float: right;
+  top: 0;
+}
+
+.create-acc {
+  font-size: 1rem;
+  background-color: var(--blue-1);
+  padding-block: 1em;
+  margin-inline: 0;
+  padding-left: 1em;
+}
+
+.credentials {
+  display: block;
+  margin-block: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.credentials-input {
+  width: 100% !important;
+  margin-inline: 0 !important;
+  background-color: var(--gray-0);
+  border: 1px solid var(--gray-9);
+  border-radius: 3px;
+  width: 90%;
+  margin-block: 0.5em;
+}
+
+.login-submit {
+  float: right;
+}
+
+.login-submit-button {
+  background: var(--brand-hover);
+  color: var(--gray-0);
+}
+
+.account-modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-modal-footer-p {
+  font-size: 1em;
+  padding-top: 0.5em;
+}
+
+.account-anchor {
+  // text-decoration: none;
+  color: var(--gray-9) !important;
 }

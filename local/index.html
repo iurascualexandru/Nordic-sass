@@ -12,6 +12,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script src="app.bundle.js" defer></script>
+
+  <!-- Slider -->
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
 </head>
 
 <body>
@@ -58,15 +64,16 @@
                   d="M24.9687 12.4771C24.9811 19.149 19.54 24.6047 12.8682 24.6094C9.98656 24.6114 7.33969 23.6069 5.25966 21.9282C4.7188 21.4916 4.67837 20.681 5.16987 20.1895L5.72002 19.6394C6.14038 19.219 6.81147 19.173 7.27719 19.5425C8.80966 20.7586 10.7491 21.4844 12.8594 21.4844C17.8254 21.4844 21.8437 17.4653 21.8437 12.5C21.8437 7.53397 17.8246 3.51566 12.8594 3.51566C10.4759 3.51566 8.31108 4.44188 6.70371 5.95374L9.18193 8.43196C9.67411 8.92415 9.32553 9.76566 8.62953 9.76566H1.53125C1.09976 9.76566 0.75 9.4159 0.75 8.98441V1.88611C0.75 1.19012 1.5915 0.841534 2.08369 1.33367L4.49443 3.74442C6.6684 1.66683 9.61484 0.390656 12.8594 0.390656C19.5395 0.390656 24.9564 5.79984 24.9687 12.4771ZM16.1351 16.324L16.6148 15.7073C17.0121 15.1964 16.9201 14.4601 16.4092 14.0628L14.4219 12.5171V7.42191C14.4219 6.77469 13.8972 6.25003 13.25 6.25003H12.4687C11.8215 6.25003 11.2969 6.77469 11.2969 7.42191V14.0455L14.4907 16.5296C15.0016 16.9269 15.7378 16.8349 16.1351 16.324V16.324Z"
                   fill="#072048" />
               </svg>
-
             </a>
-            <a href="#"><svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <button class="account-button"><svg class="account-svg" width="23" height="25" viewBox="0 0 23 25"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11.9062 12.5C15.3584 12.5 18.1562 9.70215 18.1562 6.25C18.1562 2.79785 15.3584 0 11.9062 0C8.4541 0 5.65625 2.79785 5.65625 6.25C5.65625 9.70215 8.4541 12.5 11.9062 12.5ZM16.2813 14.0625H15.4658C14.3818 14.5605 13.1758 14.8438 11.9062 14.8438C10.6367 14.8438 9.43555 14.5605 8.34668 14.0625H7.53125C3.9082 14.0625 0.96875 17.002 0.96875 20.625V22.6562C0.96875 23.9502 2.01855 25 3.3125 25H20.5C21.7939 25 22.8438 23.9502 22.8438 22.6562V20.625C22.8438 17.002 19.9043 14.0625 16.2813 14.0625Z"
                   fill="#072048" />
               </svg>
+            </button>
 
-            </a>
             <a href="#" class="pc-only"><svg width="26" height="19" viewBox="0 0 26 19" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -82,24 +89,30 @@
                   fill="#072048" />
               </svg>
 
+
+
             </a>
-            <a href="#"><svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="cart-button" data-role="cart-button" data-target="cart-modal" data-status="closed"><svg
+                class="cart-svg" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M23.5938 13.467L25.6455 4.43919C25.7937 3.78737 25.2982 3.16666 24.6298 3.16666H7.58195L7.18412 1.22178C7.08498 0.737019 6.65842 0.388885 6.16359 0.388885H1.71354C1.13824 0.388885 0.671875 0.855248 0.671875 1.43055V2.125C0.671875 2.7003 1.13824 3.16666 1.71354 3.16666H4.74666L7.79562 18.0727C7.06619 18.4922 6.57465 19.2787 6.57465 20.1806C6.57465 21.5229 7.66285 22.6111 9.00521 22.6111C10.3476 22.6111 11.4358 21.5229 11.4358 20.1806C11.4358 19.5003 11.1559 18.8856 10.7056 18.4444H19.8048C19.3545 18.8856 19.0747 19.5003 19.0747 20.1806C19.0747 21.5229 20.1629 22.6111 21.5052 22.6111C22.8476 22.6111 23.9358 21.5229 23.9358 20.1806C23.9358 19.2182 23.3764 18.3866 22.5652 17.9928L22.8046 16.9392C22.9527 16.2874 22.4573 15.6667 21.7889 15.6667H10.1388L9.85469 14.2778H22.578C23.0644 14.2778 23.486 13.9412 23.5938 13.467Z"
                   fill="#072048" />
               </svg>
-            </a>
+            </button>
 
-
-
-            <a class="btn" href="#open-modal" onclick="document.getElementById('open-modal').style.display='block'"><svg
-                fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none" width="30px"
-                height="30px">
+            <button class="btn" data-role="modal" data-target="menu-modal" data-status="closed"><svg fill="#000000"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none" class="sandvish-svg">
                 <path
                   d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
                   fill="#072048" />
-              </svg></a>
-
+              </svg></button>
+            <!-- 
+            <button class="btn" data-role="open-modal" data-target="menu-modal"><svg fill="#000000"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none" width="30px" height="30px">
+                <path
+                  d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
+                  fill="#072048" />
+              </svg></button> -->
 
           </nav>
         </div>
@@ -130,16 +143,112 @@
     </div>
   </header>
 
-  <!-- Modal doar cu CSS -->
-  <div id="open-modal" class="modal-window">
+  <div class="overlay"></div>
+  <!-- Cart Modal -->
+
+  <div id="cart-modal">
     <div class="close-modal">
-      <a href="#" title="Close" onclick="document.getElementById('open-modal').style.display='none'"><svg
-          class="close-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button title="Close" data-role="cart-button" class="close-svg" data-target="cart-modal" data-status="opened"><svg
+          width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0.419604 0.419604C0.552277 0.286595 0.709888 0.181067 0.883407 0.109064C1.05693 0.0370616 1.24295 0 1.43081 0C1.61868 0 1.8047 0.0370616 1.97822 0.109064C2.15174 0.181067 2.30935 0.286595 2.44202 0.419604L10.0004 7.98082L17.5587 0.419604C17.6915 0.286811 17.8492 0.181473 18.0227 0.109605C18.1962 0.0377376 18.3821 0.00074779 18.5699 0.00074779C18.7577 0.00074779 18.9437 0.0377376 19.1172 0.109605C19.2907 0.181473 19.4484 0.286811 19.5811 0.419604C19.7139 0.552398 19.8193 0.710047 19.8911 0.88355C19.963 1.05705 20 1.24301 20 1.43081C20 1.61861 19.963 1.80457 19.8911 1.97808C19.8193 2.15158 19.7139 2.30923 19.5811 2.44202L12.0199 10.0004L19.5811 17.5587C19.7139 17.6915 19.8193 17.8492 19.8911 18.0227C19.963 18.1962 20 18.3821 20 18.5699C20 18.7577 19.963 18.9437 19.8911 19.1172C19.8193 19.2907 19.7139 19.4484 19.5811 19.5811C19.4484 19.7139 19.2907 19.8193 19.1172 19.8911C18.9437 19.963 18.7577 20 18.5699 20C18.3821 20 18.1962 19.963 18.0227 19.8911C17.8492 19.8193 17.6915 19.7139 17.5587 19.5811L10.0004 12.0199L2.44202 19.5811C2.30923 19.7139 2.15158 19.8193 1.97808 19.8911C1.80457 19.963 1.61861 20 1.43081 20C1.24301 20 1.05705 19.963 0.88355 19.8911C0.710047 19.8193 0.552398 19.7139 0.419604 19.5811C0.286811 19.4484 0.181473 19.2907 0.109605 19.1172C0.0377376 18.9437 0.00074779 18.7577 0.00074779 18.5699C0.00074779 18.3821 0.0377376 18.1962 0.109605 18.0227C0.181473 17.8492 0.286811 17.6915 0.419604 17.5587L7.98082 10.0004L0.419604 2.44202C0.286595 2.30935 0.181067 2.15174 0.109064 1.97822C0.0370616 1.8047 0 1.61868 0 1.43081C0 1.24295 0.0370616 1.05693 0.109064 0.883407C0.181067 0.709888 0.286595 0.552277 0.419604 0.419604Z"
             fill="#072048" />
         </svg>
-      </a>
+      </button>
+    </div>
+    <p class="cart-p">Your cart is empty!</p>
+
+
+    <div
+      class=" slider-padding-top swiffy-slider slider-item-show2 slider-nav-dark slider-nav-outside slider-nav-visible slider-nav-autoplay"
+      data-slider-nav-autoplay-interval="8000">
+      <ul class="slider-container">
+        <li>
+          <div id="slide1">
+            <img src="resources/images/category-1.png" alt="">
+
+          </div>
+        </li>
+        <li>
+          <div id="slide2">
+            <img src="resources/images/category-2.png" alt="">
+          </div>
+        </li>
+        <li>
+          <div id="slide3">
+            <img src="resources/images/category-3.png" alt="">
+          </div>
+        </li>
+        <li>
+          <div id="slide4">
+            <img src="resources/images/category-4.png" alt="">
+          </div>
+        </li>
+      </ul>
+
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
+
+      <ul class="slider-indicators">
+        <li class=""></li>
+        <li class="active"></li>
+        <li class=""></li>
+        <li class=""></li>
+      </ul>
+    </div>
+
+    <div
+      class="slider2-padding-top swiffy-slider slider-item-show2 slider-nav-dark slider-nav-outside slider-nav-visible slider-nav-autoplay"
+      data-slider-nav-autoplay-interval="8000">
+      <ul class="slider-container">
+        <li>
+          <div id="slide1">
+            <img src="resources/images/category-5.png" alt="">
+
+          </div>
+        </li>
+        <li>
+          <div id="slide2">
+            <img src="resources/images/category-6.png" alt="">
+          </div>
+        </li>
+        <li>
+          <div id="slide3">
+            <img src="resources/images/category-7.png" alt="">
+          </div>
+        </li>
+        <li>
+          <div id="slide4">
+            <img src="resources/images/category-8.png" alt="">
+          </div>
+        </li>
+      </ul>
+
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
+
+      <ul class="slider-indicators">
+        <li class=""></li>
+        <li class="active"></li>
+        <li class=""></li>
+        <li class=""></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+  <!-- Menu-Modal doar cu CSS -->
+  <div id="menu-modal" class="modal-window">
+    <div class="close-modal">
+      <button title="Close" data-role="modal" class="close-svg" data-target="menu-modal" data-status="opened"><svg
+          width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.419604 0.419604C0.552277 0.286595 0.709888 0.181067 0.883407 0.109064C1.05693 0.0370616 1.24295 0 1.43081 0C1.61868 0 1.8047 0.0370616 1.97822 0.109064C2.15174 0.181067 2.30935 0.286595 2.44202 0.419604L10.0004 7.98082L17.5587 0.419604C17.6915 0.286811 17.8492 0.181473 18.0227 0.109605C18.1962 0.0377376 18.3821 0.00074779 18.5699 0.00074779C18.7577 0.00074779 18.9437 0.0377376 19.1172 0.109605C19.2907 0.181473 19.4484 0.286811 19.5811 0.419604C19.7139 0.552398 19.8193 0.710047 19.8911 0.88355C19.963 1.05705 20 1.24301 20 1.43081C20 1.61861 19.963 1.80457 19.8911 1.97808C19.8193 2.15158 19.7139 2.30923 19.5811 2.44202L12.0199 10.0004L19.5811 17.5587C19.7139 17.6915 19.8193 17.8492 19.8911 18.0227C19.963 18.1962 20 18.3821 20 18.5699C20 18.7577 19.963 18.9437 19.8911 19.1172C19.8193 19.2907 19.7139 19.4484 19.5811 19.5811C19.4484 19.7139 19.2907 19.8193 19.1172 19.8911C18.9437 19.963 18.7577 20 18.5699 20C18.3821 20 18.1962 19.963 18.0227 19.8911C17.8492 19.8193 17.6915 19.7139 17.5587 19.5811L10.0004 12.0199L2.44202 19.5811C2.30923 19.7139 2.15158 19.8193 1.97808 19.8911C1.80457 19.963 1.61861 20 1.43081 20C1.24301 20 1.05705 19.963 0.88355 19.8911C0.710047 19.8193 0.552398 19.7139 0.419604 19.5811C0.286811 19.4484 0.181473 19.2907 0.109605 19.1172C0.0377376 18.9437 0.00074779 18.7577 0.00074779 18.5699C0.00074779 18.3821 0.0377376 18.1962 0.109605 18.0227C0.181473 17.8492 0.286811 17.6915 0.419604 17.5587L7.98082 10.0004L0.419604 2.44202C0.286595 2.30935 0.181067 2.15174 0.109064 1.97822C0.0370616 1.8047 0 1.61868 0 1.43081C0 1.24295 0.0370616 1.05693 0.109064 0.883407C0.181067 0.709888 0.286595 0.552277 0.419604 0.419604Z"
+            fill="#072048" />
+        </svg>
+      </button>
     </div>
     <div class="modal-elements">
       <a href="" class="modal-el">Home</a>
@@ -150,6 +259,47 @@
       <a href="" class="modal-el">Nunc</a>
     </div>
   </div>
+
+  <!-- Log-in Modal -->
+  <div class="login">
+    <div class="login-modal-header">
+      <div class="top-login">
+        <p class="login-title">LOGIN</p>
+      </div>
+      <div class="close-login">
+        <button class="login-svg"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.419604 0.419604C0.552277 0.286595 0.709888 0.181067 0.883407 0.109064C1.05693 0.0370616 1.24295 0 1.43081 0C1.61868 0 1.8047 0.0370616 1.97822 0.109064C2.15174 0.181067 2.30935 0.286595 2.44202 0.419604L10.0004 7.98082L17.5587 0.419604C17.6915 0.286811 17.8492 0.181473 18.0227 0.109605C18.1962 0.0377376 18.3821 0.00074779 18.5699 0.00074779C18.7577 0.00074779 18.9437 0.0377376 19.1172 0.109605C19.2907 0.181473 19.4484 0.286811 19.5811 0.419604C19.7139 0.552398 19.8193 0.710047 19.8911 0.88355C19.963 1.05705 20 1.24301 20 1.43081C20 1.61861 19.963 1.80457 19.8911 1.97808C19.8193 2.15158 19.7139 2.30923 19.5811 2.44202L12.0199 10.0004L19.5811 17.5587C19.7139 17.6915 19.8193 17.8492 19.8911 18.0227C19.963 18.1962 20 18.3821 20 18.5699C20 18.7577 19.963 18.9437 19.8911 19.1172C19.8193 19.2907 19.7139 19.4484 19.5811 19.5811C19.4484 19.7139 19.2907 19.8193 19.1172 19.8911C18.9437 19.963 18.7577 20 18.5699 20C18.3821 20 18.1962 19.963 18.0227 19.8911C17.8492 19.8193 17.6915 19.7139 17.5587 19.5811L10.0004 12.0199L2.44202 19.5811C2.30923 19.7139 2.15158 19.8193 1.97808 19.8911C1.80457 19.963 1.61861 20 1.43081 20C1.24301 20 1.05705 19.963 0.88355 19.8911C0.710047 19.8193 0.552398 19.7139 0.419604 19.5811C0.286811 19.4484 0.181473 19.2907 0.109605 19.1172C0.0377376 18.9437 0.00074779 18.7577 0.00074779 18.5699C0.00074779 18.3821 0.0377376 18.1962 0.109605 18.0227C0.181473 17.8492 0.286811 17.6915 0.419604 17.5587L7.98082 10.0004L0.419604 2.44202C0.286595 2.30935 0.181067 2.15174 0.109064 1.97822C0.0370616 1.8047 0 1.61868 0 1.43081C0 1.24295 0.0370616 1.05693 0.109064 0.883407C0.181067 0.709888 0.286595 0.552277 0.419604 0.419604Z"
+              fill="#072048" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="create-acc">
+      <span>You do not have an account? Create it <a href="" class="account-anchor"> here</a>!</span>
+    </div>
+
+    <div class="credentials">
+      <input type="text" placeholder="Username" class="credentials-input">
+      <input type="password" placeholder="********" class="credentials-input">
+    </div>
+
+    <div class="account-modal-footer">
+      <div class="remember">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me"> Remember me on this device</label>
+
+        <p class="account-modal-footer-p">Forgot your password? Reset it <a href="" class="account-anchor"> here</a>!
+        </p>
+      </div>
+      <div class="login-submit">
+        <button type="button" class="login-submit-button">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+
 
   <main>
     <section class="section__1" id="sectionOne">
@@ -226,17 +376,20 @@
       <div class="container items">
         <div class="item">
           <h3>Maecenas</h3>
-          <p>Nunc porta iaculis elementum. Duis vel orci quis mauris eleifend varius. Nullam vel neque id ante volutpat
+          <p>Nunc porta iaculis elementum. Duis vel orci quis mauris eleifend varius. Nullam vel neque id ante
+            volutpat
             iaculis. Etiam consequat urna ut urna tristique, a ornare erat condimentum.</p>
         </div>
         <div class="item">
           <h3>Maecenas</h3>
-          <p>Nunc porta iaculis elementum. Duis vel orci quis mauris eleifend varius. Nullam vel neque id ante volutpat
+          <p>Nunc porta iaculis elementum. Duis vel orci quis mauris eleifend varius. Nullam vel neque id ante
+            volutpat
             iaculis. Etiam consequat urna ut urna tristique, a ornare erat condimentum.</p>
         </div>
         <div class="item">
           <h3>Maecenas</h3>
-          <p>Nunc porta iaculis elementum. Duis vel orci quis mauris eleifend varius. Nullam vel neque id ante volutpat
+          <p>Nunc porta iaculis elementum. Duis vel orci quis mauris eleifend varius. Nullam vel neque id ante
+            volutpat
             iaculis. Etiam consequat urna ut urna tristique, a ornare erat condimentum.</p>
         </div>
       </div>
